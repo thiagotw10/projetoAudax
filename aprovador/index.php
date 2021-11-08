@@ -201,7 +201,7 @@ include('../verifica-administracao.php');
 
         <!--modal do card aqui-->
         <div class="modal" id="modal"><div class='modal-card' id="card"></div></div>
-        <!--fim modal card -->
+        <!--fim modal card geral -->
     </div>
 
 
