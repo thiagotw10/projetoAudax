@@ -194,7 +194,7 @@ function deletarUsuario(c){
         </div>
     <!-- menu hamburguer-->
         <div class='container-modal-h1-aprovador'>
-            <h1> Cadastrar Material </h1>
+            <h1> Visualizar solicitação </h1>
 
          </div>
          

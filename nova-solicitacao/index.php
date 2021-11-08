@@ -77,15 +77,18 @@ include('../verifica-administracao.php');
 
                                     if(isset($_POST['enviarSolicitacao'])){
                                         $material = $_POST['material'];
-                                        $enviar = mysqli_query($conexao, "INSERT INTO solicitacoes (solicitador, data_atual, materiais) VALUES ('$usuario', now(), '$material');");
+                                        foreach($material as $key => $value){
+
+                                        $enviar = mysqli_query($conexao, "INSERT INTO solicitacoes (solicitador, data_atual, materiais) VALUES ('$usuario', now(), '$value');");
                                         echo "<script> alert('SOLICITAÇÃO ENVIADA COM SUCESSO!!'); location.href = '../solicitador'; </script>";
+                                    }
                                     }
 
 
                                      while($row_buscar = mysqli_fetch_assoc($buscar_dados)){
 
                                         $nome_material = $row_buscar['nome_material'];
-                                        echo "<label><input style='margin-left: 5px; margin-right: 5px;' type='checkbox' name='material' value='$nome_material' id=''>$nome_material</label>";
+                                        echo "<label><input style='margin-left: 5px; margin-right: 5px;' type='checkbox' name='material[]' value='$nome_material' id=''>$nome_material</label>";
 
                                      }
 
